@@ -1,0 +1,16 @@
+# Block access to the SwartzDB folder and everything inside it
+RewriteEngine On
+RewriteRule ^SwartzDB/ - [F,L]
+
+# Block access to .sdb and .bak files site-wide
+<FilesMatch "\.(sdb|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# If using Apache 2.4 or later, use this instead:
+<IfModule mod_authz_core.c>
+    <FilesMatch "\.(sdb|bak)$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
