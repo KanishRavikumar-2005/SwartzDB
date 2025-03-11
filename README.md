@@ -1,6 +1,6 @@
 
 
-# SwartzBD
+# SwartzDB
 ## Lightweight JSON-Based Database for Web Apps
 
 This project provides a simple, file-based JSON database for small-scale web applications. It includes built-in encryption and various functions for database control, data access, and manipulation.
