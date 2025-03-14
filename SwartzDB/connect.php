@@ -488,7 +488,7 @@ class SwartzDB {
         $final = json_encode($dataV);
         $this->put($file, $final);
     }
-    public function addJsonDirect($file, ...$code) {
+    public function add($file, ...$code) {
         $dataV = $this->get($file);
         if (count($code) === 1 && is_array($code[0])) {
             $code = $code[0];
